@@ -2,7 +2,7 @@ package javautils;
 
 import java.util.Scanner;
 
-public class ScannerTest {
+public class ScannerTest implements MyTester {
     public void test() {
 /*        //基础输入测试
         Scanner sc = new Scanner(System.in);
@@ -18,7 +18,7 @@ public class ScannerTest {
         //Scanner的适用场景演示
         System.out.println("适用场景演示");
         String input = "1 fish 23 fish 4 red fish blue fish";
-        System.out.println("字符串："+input );
+        System.out.println("字符串：" + input);
         Scanner s = new Scanner(input).useDelimiter("\\s*fish\\s*");
         System.out.println("扫描一个数值");
         System.out.println(s.nextInt());
