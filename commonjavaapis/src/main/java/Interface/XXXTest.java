@@ -1,4 +1,4 @@
-package javautils;
+package Interface;
 
 import Interface.MyTester;
 

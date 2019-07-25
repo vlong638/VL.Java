@@ -1,7 +1,10 @@
 import Interface.MyTester;
 import collections.*;
+import exceptions.ExceptionTest;
 import javautils.RandomTest;
 import javautils.ScannerTest;
+import threading.RunnableTest;
+import threading.ThreadingTest;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -20,6 +23,9 @@ public class Main {
         testers.put(LinkedHashSetTest.class.getSimpleName(),new LinkedHashSetTest());
         testers.put(LinkedListTest.class.getSimpleName(),new LinkedListTest());
         testers.put(CollectionsTest.class.getSimpleName(),new CollectionsTest());
+        testers.put(ExceptionTest.class.getSimpleName(),new ExceptionTest());
+        testers.put(ThreadingTest.class.getSimpleName(),new ThreadingTest());
+        testers.put(RunnableTest.class.getSimpleName(),new RunnableTest());
 
         HashSet<String> testerFetchers = new HashSet<>();
         for (Object key : testers.keySet()) {
