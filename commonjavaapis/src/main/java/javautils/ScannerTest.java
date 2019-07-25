@@ -1,5 +1,7 @@
 package javautils;
 
+import Interface.MyTester;
+
 import java.util.Scanner;
 
 public class ScannerTest implements MyTester {

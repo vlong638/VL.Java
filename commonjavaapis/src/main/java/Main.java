@@ -1,4 +1,6 @@
-import javautils.MyTester;
+import Interface.MyTester;
+import collections.ArrayListTest;
+import collections.HashSetTest;
 import javautils.RandomTest;
 import javautils.ScannerTest;
 
@@ -9,11 +11,15 @@ import java.util.Scanner;
 import java.util.stream.Stream;
 
 public class Main {
+    //psvm 创建静态执行类
     public static void main(String[] args) {
         HashMap testers =new HashMap<String,MyTester>();
         testers.put(ScannerTest.class.getSimpleName(),new ScannerTest());
         testers.put(RandomTest.class.getSimpleName(),new RandomTest());
-        HashSet<String> testerFetechers =new HashSet<String>();
+        testers.put(ArrayListTest.class.getSimpleName(),new ArrayListTest());
+        testers.put(HashSetTest.class.getSimpleName(),new HashSetTest());
+
+        HashSet<String> testerFetechers = new HashSet<>();
         for (Object key : testers.keySet()) {
             testerFetechers.add(key.toString());
         }
