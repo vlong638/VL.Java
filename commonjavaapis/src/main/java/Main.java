@@ -1,6 +1,5 @@
 import Interface.MyTester;
-import collections.ArrayListTest;
-import collections.HashSetTest;
+import collections.*;
 import javautils.RandomTest;
 import javautils.ScannerTest;
 
@@ -18,10 +17,13 @@ public class Main {
         testers.put(RandomTest.class.getSimpleName(),new RandomTest());
         testers.put(ArrayListTest.class.getSimpleName(),new ArrayListTest());
         testers.put(HashSetTest.class.getSimpleName(),new HashSetTest());
+        testers.put(LinkedHashSetTest.class.getSimpleName(),new LinkedHashSetTest());
+        testers.put(LinkedListTest.class.getSimpleName(),new LinkedListTest());
+        testers.put(CollectionsTest.class.getSimpleName(),new CollectionsTest());
 
-        HashSet<String> testerFetechers = new HashSet<>();
+        HashSet<String> testerFetchers = new HashSet<>();
         for (Object key : testers.keySet()) {
-            testerFetechers.add(key.toString());
+            testerFetchers.add(key.toString());
         }
         while (true)
         {
@@ -31,7 +33,7 @@ public class Main {
             }
             System.out.println("输入需要测试的类名");
             String key =  new Scanner(System.in).next();
-            Object result  = testerFetechers.stream().filter(c -> c.toLowerCase().startsWith(key.toLowerCase()));
+            Object result  = testerFetchers.stream().filter(c -> c.toLowerCase().startsWith(key.toLowerCase()));
             Optional<String> target= ((Stream) result).findFirst();
             if (target.equals(Optional.empty()))
                 System.out.println("没有匹配的类名，请重新输入");

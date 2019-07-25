@@ -7,7 +7,9 @@ import java.util.Collections;
 import java.util.Comparator;
 
 /**
- *
+ *  ArrayList:大小可变的数组结构
+ *  实现非同步的,多线程
+ *  数组结构,查询快
  */
 public class ArrayListTest implements MyTester {
 
